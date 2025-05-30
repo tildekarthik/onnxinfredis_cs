@@ -5,14 +5,14 @@ namespace yoloinfredis_cs;
 public class Detection
 {
     public string class_name { get; set; } = string.Empty;
-    public float[] xyxyn { get; set; } = Array.Empty<float>();
+    public float[] xyxyn { get; set; } = [];
     public float conf { get; set; }
 }
 
 public class ResultSummary
 {
-    public List<Detection> detections { get; set; } = new();
-    public int[] image_shape { get; set; } = Array.Empty<int>();
+    public List<Detection> detections { get; set; } = [];
+    public int[] image_shape { get; set; } = [];
 }
 
 public static class DetectionSerializer
