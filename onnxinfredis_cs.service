@@ -1,0 +1,14 @@
+[Unit]
+Description=Onnx Inference CSharp Worker Instance %i
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/karthik/onnxinfredis_cs/bin/Release/net9.0/linux-x64/publish/
+ExecStart=/home/karthik/onnxinfredis_cs/bin/Release/net9.0/linux-x64/publish/onnxinfredis_cs
+Restart=always
+RestartSec=3
+Environment=ASPNETCORE_ENVIRONMENT=Production
+
+[Install]
+WantedBy=multi-user.target
